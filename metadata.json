@@ -1,0 +1,8 @@
+{
+  "name": "@gaycruisingbrazil",
+  "description": "An independent editorial guide to Brazil's gay adult nightlife, venues, and community.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

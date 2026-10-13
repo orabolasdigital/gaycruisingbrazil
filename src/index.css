@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #080809;
+  --color-bg-secondary: #111113;
+  --color-surface: #19191B;
+  --color-border: #2B2B2F;
+  --color-text-main: #F3F1EE;
+  --color-text-muted: #A5A4A8;
+  --color-blood: #F0203E;
+  --color-blood-dark: #7E1425;
+
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-antonio: 'Antonio', sans-serif;
+}
+
+:root {
+  --bg-primary: #080809;
+  --bg-secondary: #111113;
+  --surface: #19191B;
+  --border-color: #2B2B2F;
+  --text-main: #F3F1EE;
+  --text-muted: #A5A4A8;
+  --blood-red: #F0203E;
+  --blood-dark: #7E1425;
+}
+
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Light, tall, condensed headlines */
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.font-editorial-regular {
+  font-family: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* Non-draggable editorial imagery */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #080809;
+}
+::-webkit-scrollbar-thumb {
+  background: #2B2B2F;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F0203E;
+}
+
+/* Print Stylesheet: Protect private controls, render clean public editorial guide */
+@media print {
+  header, footer, nav, button, [role="dialog"], aside, .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+  .bg-\[\#080809\], .bg-\[\#111113\], .bg-\[\#19191B\] {
+    background: #ffffff !important;
+    color: #111111 !important;
+    border-color: #e5e5e5 !important;
+  }
+  h1, h2, h3, h4 {
+    color: #000000 !important;
+  }
+  p, span {
+    color: #333333 !important;
+  }
+}
