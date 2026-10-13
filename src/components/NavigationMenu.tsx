@@ -22,8 +22,8 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({ mobile = false, 
             className={({ isActive }) =>
               `min-h-[48px] flex items-center justify-between py-3 px-4 font-heading text-lg tracking-wider uppercase transition-colors ${
                 isActive
-                  ? 'text-[#F0203E] bg-[#111113] font-normal border-l-2 border-[#F0203E]'
-                  : 'text-[#F3F1EE] hover:text-[#F0203E] hover:bg-[#111113]'
+                  ? 'text-[#FF173E] bg-[#111113] border-l-2 border-[#FF173E]'
+                  : 'text-[#F3F1EE] hover:text-[#FF173E] hover:bg-[#111113]'
               }`
             }
           >
@@ -36,7 +36,7 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({ mobile = false, 
   }
 
   return (
-    <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-7">
+    <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-6 xl:gap-7">
       {NAV_ITEMS.map((item) => (
         <NavLink
           key={item.id}
@@ -44,7 +44,7 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({ mobile = false, 
           className={({ isActive }) =>
             `relative py-2 font-heading text-base tracking-wider uppercase whitespace-nowrap transition-colors duration-150 ${
               isActive
-                ? 'text-[#F0203E] font-normal'
+                ? 'text-[#FF173E]'
                 : 'text-[#A5A4A8] hover:text-[#F3F1EE]'
             }`
           }
@@ -53,7 +53,7 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({ mobile = false, 
             <>
               <span>{lang === 'en' ? item.labelEn : item.labelPt}</span>
               {isActive && (
-                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#F0203E]" />
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF173E]" />
               )}
             </>
           )}

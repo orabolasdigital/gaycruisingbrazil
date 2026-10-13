@@ -7,10 +7,10 @@
   --color-border: #2B2B2F;
   --color-text-main: #F3F1EE;
   --color-text-muted: #A5A4A8;
-  --color-blood: #F0203E;
-  --color-blood-dark: #7E1425;
+  --color-blood: #FF173E;
+  --color-blood-deep: #C90028;
 
-  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-heading: 'Bebas Neue', 'Antonio', sans-serif;
   --font-body: 'Manrope', sans-serif;
   --font-antonio: 'Antonio', sans-serif;
 }
@@ -22,8 +22,8 @@
   --border-color: #2B2B2F;
   --text-main: #F3F1EE;
   --text-muted: #A5A4A8;
-  --blood-red: #F0203E;
-  --blood-dark: #7E1425;
+  --blood-red: #FF173E;
+  --blood-deep: #C90028;
 }
 
 html, body {
@@ -35,18 +35,21 @@ html, body {
   width: 100%;
 }
 
-/* Light, tall, condensed headlines */
+/* Condensed Display Headings (Bebas Neue & Antonio) */
 h1, h2, h3, h4, .font-heading {
-  font-family: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 300;
+  font-family: 'Bebas Neue', 'Antonio', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-.font-editorial-regular {
-  font-family: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.05em;
+/* Subtle Gradient utility for primary buttons and signature highlights */
+.bg-blood-gradient {
+  background: linear-gradient(135deg, #FF173E 0%, #C90028 100%);
+}
+
+.border-blood-gradient {
+  border-image: linear-gradient(135deg, #FF173E, #C90028) 1;
 }
 
 /* Non-draggable editorial imagery */
@@ -67,10 +70,10 @@ img {
   background: #2B2B2F;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #F0203E;
+  background: #FF173E;
 }
 
-/* Print Stylesheet: Protect private controls, render clean public editorial guide */
+/* Print Stylesheet */
 @media print {
   header, footer, nav, button, [role="dialog"], aside, .no-print {
     display: none !important;

@@ -20,7 +20,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = 
         aria-pressed={lang === 'en'}
         className={`min-h-[32px] px-2.5 py-1 tracking-wider uppercase transition-colors rounded-[1px] cursor-pointer ${
           lang === 'en'
-            ? 'bg-[#F0203E] text-white font-semibold'
+            ? 'bg-[#FF173E] text-white font-semibold'
             : 'text-[#A5A4A8] hover:text-[#F3F1EE] hover:bg-[#19191B]'
         }`}
       >
@@ -32,7 +32,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = 
         aria-pressed={lang === 'pt'}
         className={`min-h-[32px] px-2.5 py-1 tracking-wider uppercase transition-colors rounded-[1px] cursor-pointer ${
           lang === 'pt'
-            ? 'bg-[#F0203E] text-white font-semibold'
+            ? 'bg-[#FF173E] text-white font-semibold'
             : 'text-[#A5A4A8] hover:text-[#F3F1EE] hover:bg-[#19191B]'
         }`}
       >

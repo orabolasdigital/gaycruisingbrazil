@@ -1,23 +1,33 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { EditorialCard } from '../components/EditorialCard';
 import { COMMUNITY_DATA } from '../data/content';
 import { useLanguage } from '../context/LanguageContext';
-import { HeartHandshake, Shield, PhoneCall } from 'lucide-react';
+import { HeartHandshake, ChevronRight } from 'lucide-react';
 
 export const CommunityPage: React.FC = () => {
   const { lang, t } = useLanguage();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 space-y-8 sm:space-y-12 overflow-x-hidden">
+      {/* Breadcrumbs */}
+      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#A5A4A8]">
+        <Link to="/" className="hover:text-[#FF173E] transition-colors">
+          {t('Home', 'Início')}
+        </Link>
+        <ChevronRight className="w-3.5 h-3.5 text-[#2B2B2F]" />
+        <span className="text-[#F3F1EE]">{t('Community & Support', 'Comunidade & Apoio')}</span>
+      </nav>
+
       {/* Editorial Header */}
       <div className="border-b border-[#2B2B2F] pb-6 sm:pb-8">
-        <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#F0203E]">
+        <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#FF173E]">
           <HeartHandshake className="w-3.5 h-3.5" />
           <span className="uppercase tracking-widest font-semibold">
             {t('PUBLIC HEALTH & SUPPORT', 'SAÚDE PÚBLICA & APOIO')}
           </span>
         </div>
-        <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl uppercase font-light text-[#F3F1EE] tracking-tight">
+        <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl uppercase font-normal text-[#F3F1EE] tracking-tight">
           {t('COMMUNITY & SUPPORT', 'COMUNIDADE & APOIO')}
         </h1>
         <p className="mt-3 text-xs sm:text-sm text-[#A5A4A8] max-w-2xl leading-relaxed">
@@ -28,11 +38,11 @@ export const CommunityPage: React.FC = () => {
         </p>
       </div>
 
-      {/* Emergency Hotlines Emergency Grid: Single col on mobile */}
+      {/* Emergency Hotlines Emergency Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-        <div className="bg-[#111113] border-l-2 border-[#F0203E] border-y border-r border-[#2B2B2F] p-5 rounded-[2px] space-y-2">
+        <div className="bg-[#111113] border-l-2 border-[#FF173E] border-y border-r border-[#2B2B2F] p-5 rounded-[2px] space-y-2">
           <div className="flex items-center justify-between text-xs font-mono text-[#A5A4A8]">
-            <span className="text-[#F0203E] font-bold">DIAL 100</span>
+            <span className="text-[#FF173E] font-bold">DIAL 100</span>
             <span>FEDERAL GOVERNMENT</span>
           </div>
           <h2 className="font-heading text-xl uppercase font-normal text-[#F3F1EE]">
@@ -46,9 +56,9 @@ export const CommunityPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="bg-[#111113] border-l-2 border-[#F0203E] border-y border-r border-[#2B2B2F] p-5 rounded-[2px] space-y-2">
+        <div className="bg-[#111113] border-l-2 border-[#FF173E] border-y border-r border-[#2B2B2F] p-5 rounded-[2px] space-y-2">
           <div className="flex items-center justify-between text-xs font-mono text-[#A5A4A8]">
-            <span className="text-[#F0203E] font-bold">DIAL 136</span>
+            <span className="text-[#FF173E] font-bold">DIAL 136</span>
             <span>MINISTRY OF HEALTH</span>
           </div>
           <h2 className="font-heading text-xl uppercase font-normal text-[#F3F1EE]">
@@ -62,9 +72,9 @@ export const CommunityPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="bg-[#111113] border-l-2 border-[#F0203E] border-y border-r border-[#2B2B2F] p-5 rounded-[2px] space-y-2">
+        <div className="bg-[#111113] border-l-2 border-[#FF173E] border-y border-r border-[#2B2B2F] p-5 rounded-[2px] space-y-2">
           <div className="flex items-center justify-between text-xs font-mono text-[#A5A4A8]">
-            <span className="text-[#F0203E] font-bold">DIAL 188</span>
+            <span className="text-[#FF173E] font-bold">DIAL 188</span>
             <span>CVV BRASIL</span>
           </div>
           <h2 className="font-heading text-xl uppercase font-normal text-[#F3F1EE]">
